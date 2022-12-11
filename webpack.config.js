@@ -3,17 +3,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtratcPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "./",
   },
 
-  mode: "produciton",
+  mode: "production",
 
   resolve: {
     extensions: [".js", ".jsx"],
